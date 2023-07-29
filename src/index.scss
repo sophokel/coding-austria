@@ -30,11 +30,14 @@ h5 {
 }
 
 .route-swipe-card {
-  width: 90vw;
-  position: absolute;
-  top: 56px + 20px;
-  height: calc(100vh - 56px - 68px - 40px);
+  width: 90%;
+  height: 200px;
   padding: 14px;
+}
+
+.match {
+  background-color: red;
+  display: none;
 }
 
 .header-menu {
