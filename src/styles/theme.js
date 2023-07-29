@@ -4,7 +4,7 @@ import { createTheme } from "@mui/material/styles";
 
 const mainBlack = "#212121";
 const mainWhite = "#fafafa";
-const gold = "#FFD700";
+const gold = "#bee4be";
 const red = "#ff1744";
 const blue = "#757ce8";
 
