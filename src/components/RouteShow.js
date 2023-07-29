@@ -1,7 +1,6 @@
 import {
   AccessTime,
   BubbleChart,
-  ChildCare,
   LocationOn,
   Map,
   Public,
@@ -17,19 +16,11 @@ function RouteShow({ kiga, index, state }) {
 
   const {
     driveStart,
-    driveEnd,
+  driveDestination,
     district,
     time, 
     date,
-   // allGroupSizes,
-   // allOpeningHours,
-   // allAgeGroups,
-   // publicOrPrivate,
   } = searchParams;
-
- // const groupSizes = joinAbbreviations(allGroupSizes);
- // const openingHours = joinAbbreviations(allOpeningHours);
- // const ageGroups = joinAbbreviations(allAgeGroups);
 
   const showDetails = (e) => {
     e.preventDefault();
@@ -76,7 +67,7 @@ function RouteShow({ kiga, index, state }) {
             </div>
             <div className="row center-vertical">
               <Public className="result-icon" />
-              <p>{kiga.driveStart} - {kiga.driveEnd}
+              <p>{kiga.driveStart} - {kiga.driveDestination}
               
               </p>
             </div>
