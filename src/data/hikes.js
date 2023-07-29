@@ -9,7 +9,7 @@ export const allRoutes = [
     time: '09:00',
     date: '01-08-2023',
     level: 'mittel',
-   description: ''
+   description: 'Vom Parkplatz Gießhübl unmarkiert auf gut sichbaren Weg hinab ins Wassergspreng und auf dem markierten Güterweg hinauf zur Hochstraße. Auf dieser weiter zur Seewiese (Gasthaus geschlossen). Von der Seewiese unmarkiert auf einem gut sichtbaren Steig über den Großen Sattelberg (569 m)  zum Gasthaus Kugelwiese - so weicht man der stark frequentierten Hochstraße aus Alternative: markiert über die Hochstraße.Gut markiert direkt oder etwas weiter auf der Hochstraße über den Großen Sattel zum Parkplatz Gießhübl.'
   },
   {
     id: 2,
@@ -25,14 +25,14 @@ export const allRoutes = [
   },
   {
     id: 3,
-    name: "Hinterbrühl nach Mödling",
-    hikeStart: "Hinterbrühl",
-    hikeDestination: "Mödling", 
+    name: "Rundwanderweg: Ehemaliger Gloggnitzer Rundwanderweg 834, 1. Etappe",
+    hikeStart: "Gloggnitz",
+    hikeDestination: "Payerbach", 
     duration: "2 Stunden",
     district: "Niederösterreich",
-    time: '09:00',
-    date: '15-08-2023',
-    level: 'mittel',
-   description: ''
+    time: '07:30',
+    date: '05-09-2023',
+    level: 'schwer',
+   description: 'Landschaftlich wunderschöne Wanderung entlang des beeindruckenden Bahnverlaufs im Semmeringgebiet. Ganz besonders – aber nicht nur – für Eisenbahnfans ein echter Höhepunkt!'
   },
     ];

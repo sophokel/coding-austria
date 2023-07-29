@@ -7,7 +7,6 @@ import {
 } from "@mui/icons-material";
 import { Paper } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-// import { joinAbbreviations } from "../utils/utils";
 
 function RouteShow({ kiga, index, state }) {
   const navigate = useNavigate();
@@ -53,16 +52,7 @@ function RouteShow({ kiga, index, state }) {
             </div>
             <div className="row center-vertical">
               <AccessTime className="result-icon" />
-              <p>{kiga.time}
-               
-              </p>
-            </div>
-            <div className="row center-vertical">
-              <BubbleChart className="result-icon" />
-              <p>{kiga.date}
-                {/* {allGroupSizes.length === 0
-                  ? kiga.groupSizes.join(", ")
-                  : groupSizes} */}
+              <p>{kiga.date} um {kiga.time}
               </p>
             </div>
             <div className="row center-vertical">
