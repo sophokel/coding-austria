@@ -29,6 +29,14 @@ h5 {
   position: relative;
 }
 
+.route-swipe-card {
+  width: 90vw;
+  position: absolute;
+  top: 56px + 20px;
+  height: calc(100vh - 56px - 68px - 40px);
+  padding: 14px;
+}
+
 .header-menu {
   background-color: #bee4be;
   z-index: 3;
@@ -64,9 +72,9 @@ h5 {
 .landing-page {
   position: relative;
   height: 100vh;
-  background-image: url("../public/images/kindergarten.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  //background-image: url("../public/images/kindergarten.png");
+  //background-size: cover;
+  //background-repeat: no-repeat;
 }
 
 .col {
