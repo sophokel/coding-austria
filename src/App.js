@@ -17,47 +17,46 @@ const titles = {
   "/": {
     route: "",
     header: "Home",
-    document: "Kindergartenwahl",
+    document: "Swipe&Ride",
   },
   "/home": {
     route: "home",
     header: "Home",
-    document: "Kindergartenwahl",
+    document: "Swipe&Ride",
   },
   "/information": {
     route: "information",
     header: "Informationen",
-    document: "Kindergartenwahl: Informationen",
+    document: "Swipe&Ride",
   },
   "/search": {
     route: "search",
     header: "Suche",
-    document: "Kindergartenwahl: Suche",
+    document: "Swipe&Ride",
   },
   "/results": {
     route: "results",
     header: "Liste der verfügbaren Kindergärten",
-    document: "Kindergartenwahl: Liste der verfügbaren Kindergärten",
+    document: "Swipe&Ride",
   },
   "/details": {
     route: "details",
     header: "Details",
-    document: "Kindergartenwahl: Details",
+    document: "Swipe&Ride",
   },
   "/inquiry": {
     route: "inquiry",
     header: "Anfrage senden",
-    document: "Kindergartenwahl: Anfrage senden",
+    document: "Swipe&Ride",
   },
   "/success": {
     route: "success",
     header: "Anfrage",
-    document: "Kindergartenwahl: Anfrage versandt",
+    document: "Swipe&Ride",
   },
 };
 
 function App() {
-  const [showLandingPage, setShowLandingPage] = useState(true);
   const [pageTitle, setPageTitle] = useState("");
   const [documentTitle, setDocumentTitle] = useState("");
   const location = useLocation();
@@ -70,15 +69,11 @@ function App() {
       setPageTitle("404 Seite existiert nicht");
       setDocumentTitle("404 Seite existiert nicht");
     }
-
-    location.pathname === "/" || location.pathname === "/home"
-      ? setShowLandingPage(true)
-      : setShowLandingPage(false);
   }, [location]);
 
   return (
     <ThemeProvider theme={theme}>
-      {!showLandingPage ? <Header title={pageTitle} /> : ""}
+      <Header title={pageTitle} />
       <Routes>
         <Route path="/" element={<HomePage title={documentTitle} />} />
         <Route path="/home" element={<HomePage title={documentTitle} />} />
@@ -102,11 +97,7 @@ function App() {
         />
         <Route path="*" element={<ErrorPage title={documentTitle} />} />
       </Routes>
-      {!showLandingPage ? (
-        <Footer route={titles[location.pathname].route} />
-      ) : (
-        ""
-      )}
+      <Footer route={titles[location.pathname].route} />
     </ThemeProvider>
   );
 }

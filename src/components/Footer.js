@@ -7,6 +7,10 @@ import {
   Info,
   FeaturedPlayList,
   FeaturedPlayListOutlined,
+  PinDrop,
+  PinDropOutlined,
+    Route,
+    RouteOutlined
 } from "@mui/icons-material";
 
 function Footer({ route }) {
@@ -58,7 +62,7 @@ function Footer({ route }) {
           color="secondary"
           sx={{ padding: "0 0 5px 0" }}
         >
-          {route === "search" ? <Pageview /> : <PageviewOutlined />}
+          {route === "search" ? <PinDrop /> : <PinDropOutlined />}
         </IconButton>
         <p>Suche</p>
       </div>
@@ -69,7 +73,7 @@ function Footer({ route }) {
           color="secondary"
           sx={{ padding: "0 0 5px 0" }}
         >
-          {route === "information" ? <Info /> : <InfoOutlined />}
+          {route === "information" ? <Route /> : <RouteOutlined />}
         </IconButton>
         <p>Infos</p>
       </div>

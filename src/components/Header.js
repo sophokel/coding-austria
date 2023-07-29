@@ -70,17 +70,15 @@ function Header({ title }) {
             {isModalOpen ? <Help /> : <HelpOutline />}
           </IconButton>
           <img
-            src="/images/kindergarten_text_header.png"
+            src="/images/logo_text.png"
             alt="Kindergarten"
             className="logo-header"
             onClick={() => navigate("/home")}
+            className="logo"
           ></img>
           <IconButton color="secondary" sx={{ marginRight: "14px" }}>
             <AccountCircleOutlined />
           </IconButton>
-        </div>
-        <div className="header-title-box row center-all">
-          <p className="header-title">{title}</p>
         </div>
       </div>
     </>
