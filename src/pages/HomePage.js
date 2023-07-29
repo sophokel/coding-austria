@@ -26,7 +26,7 @@ function LandingPage() {
   return (
     <div className="landing-page col center-all">
       <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}>
-        <Paper className="route-swipe-card">Test</Paper>
+        <Paper className="route-swipe-card" sx={{backgroundColor: 'violet'}}>Test</Paper>
       </TinderCard>
       {match ? <Paper>Test</Paper> : ''}
     </div>

@@ -64,9 +64,11 @@ h5 {
 .landing-page {
   position: relative;
   height: 100vh;
-  background-image: url("../public/images/kindergarten.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+.route-swipe-card {
+  width: 350px;
+  height: 700px;
 }
 
 .col {
