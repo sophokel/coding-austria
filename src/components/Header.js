@@ -17,7 +17,7 @@ function Header({ title }) {
          <img
             src="/images/logo_text.png"
             alt="Kindergarten"
-            onClick={() => navigate("/home")}
+            onClick={() => navigate("/destination")}
             className="logo logo-left"
           ></img>
           <IconButton color="secondary" sx={{ marginRight: "14px" }}>

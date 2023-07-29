@@ -1,6 +1,6 @@
 // NOT USED
 
-import HomePage from "../pages/HomePage";
+import HomePage from "../pages/DestinationPage";
 import InformationPage from "../pages/InformationPage";
 import SearchPage from "../pages/SearchPage";
 import ResultsPage from "../pages/ResultsPage";

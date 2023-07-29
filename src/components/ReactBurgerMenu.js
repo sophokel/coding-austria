@@ -20,10 +20,10 @@ function ReactBurgerMenu({
     >
       <Link
         onClick={toggleMenuChange}
-        id="home"
+        id="destination"
         className="menu-item"
-        to="/home"
-        state={"Home"}
+        to="/destination"
+        state={"Ausflugsziel"}
       >
         Home
       </Link>

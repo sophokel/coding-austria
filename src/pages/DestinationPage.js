@@ -15,8 +15,9 @@ const onCardLeftScreen = (myIdentifier) => {
   console.log(myIdentifier + ' left the screen')
 }
 
-function LandingPage() {
+function DestinationPage() {
   const [match, setMatch] = useState(false);
+  const [msg, setMsg] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,4 +34,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default DestinationPage;

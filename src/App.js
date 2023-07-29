@@ -2,7 +2,7 @@ import theme from "./styles/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/DestinationPage";
 import InformationPage from "./pages/InformationPage";
 import SearchPage from "./pages/SearchPage";
 import ErrorPage from "./pages/ErrorPage";
@@ -12,16 +12,17 @@ import { useEffect, useState } from "react";
 import InquiryPage from "./pages/InquiryPage";
 import SuccessPage from "./pages/SuccessPage";
 import Footer from "./components/Footer";
+import DestinationPage from "./pages/DestinationPage";
 
 const titles = {
   "/": {
     route: "",
-    header: "Home",
+    header: "Ausflugsziel",
     document: "Swipe&Ride",
   },
-  "/home": {
-    route: "home",
-    header: "Home",
+  "/destination": {
+    route: "destination",
+    header: "Ausflugsziel",
     document: "Swipe&Ride",
   },
   "/information": {
@@ -75,8 +76,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <Header title={pageTitle} />
       <Routes>
-        <Route path="/" element={<HomePage title={documentTitle} />} />
-        <Route path="/home" element={<HomePage title={documentTitle} />} />
+        <Route path="/" element={<DestinationPage title={documentTitle} />} />
+        <Route path="/destination" element={<DestinationPage title={documentTitle} />} />
         <Route
           path="/information"
           element={<InformationPage title={documentTitle} />}

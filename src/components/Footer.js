@@ -10,14 +10,16 @@ import {
   PinDrop,
   PinDropOutlined,
     Route,
-    RouteOutlined
+    RouteOutlined,
+AddCircleOutline,
+AddCircle,
 } from "@mui/icons-material";
 
 function Footer({ route }) {
   const navigate = useNavigate();
 
-  const openSearch = () => {
-    navigate("/search");
+  const openDestination = () => {
+    navigate("/destination");
   };
 
   const openInfo = () => {
@@ -48,23 +50,23 @@ function Footer({ route }) {
           sx={{ padding: "0 0 5px 0" }}
         >
           {route === "results" ? (
-            <FeaturedPlayList />
+            <AddCircle />
           ) : (
-            <FeaturedPlayListOutlined />
+            <AddCircleOutline />
           )}
         </IconButton>
-        <p>Übersicht</p>
+        <p>Erstellen</p>
       </div>
 
       <div className="footer-menu col center-vertical">
         <IconButton
-          onClick={openSearch}
+          onClick={openDestination}
           color="secondary"
           sx={{ padding: "0 0 5px 0" }}
         >
-          {route === "search" ? <PinDrop /> : <PinDropOutlined />}
+          {route === "destination" ? <PinDrop /> : <PinDropOutlined />}
         </IconButton>
-        <p>Suche</p>
+        <p>Ausflugsziel</p>
       </div>
 
       <div className="footer-menu footer-menu-right col center-vertical">
@@ -75,7 +77,7 @@ function Footer({ route }) {
         >
           {route === "information" ? <Route /> : <RouteOutlined />}
         </IconButton>
-        <p>Infos</p>
+        <p>Route</p>
       </div>
     </div>
   );
