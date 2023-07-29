@@ -25,15 +25,17 @@ function DetailPage({ title }) {
 
   const {
     district,
-    allGroupSizes,
-    allOpeningHours,
-    allAgeGroups,
-    publicOrPrivate,
+    time,
+    name, driveStart, driveEnd, date,
+   // allGroupSizes,
+   // allOpeningHours,
+  //  allAgeGroups,
+  //  publicOrPrivate,
   } = searchParams;
 
-  const groupSizes = joinAbbreviations(allGroupSizes);
-  const openingHours = joinAbbreviations(allOpeningHours);
-  const ageGroups = joinAbbreviations(allAgeGroups);
+  // const groupSizes = joinAbbreviations(allGroupSizes);
+  // const openingHours = joinAbbreviations(allOpeningHours);
+  // const ageGroups = joinAbbreviations(allAgeGroups);
 
   useEffect(() => {
     document.title = title;
@@ -84,14 +86,14 @@ function DetailPage({ title }) {
           <div className="result-box col">
             <img
               alt="Kindergarten"
-              src={`/images/kiga_${kiga.id}.png`}
+              src={`/images/default-photo.jpeg`}
               className="result-pic"
             />
             <div className="col">
               <h3 className="detail-headline">{kiga.name}</h3>
               <div className="row center-vertical">
                 <Map className="result-icon" />
-                <p>{kiga.street}</p>
+                <p> {kiga.driveStart} - {kiga.driveEnd}</p>
               </div>
               <div className="row center-vertical">
                 <LocationOn className="result-icon" />
@@ -99,82 +101,25 @@ function DetailPage({ title }) {
               </div>
               <div className="row center-vertical">
                 <AccessTime className="result-icon" />
-                <p>
-                  {allOpeningHours.length === 0
+                <p>{kiga.date} um {kiga.time}<br />
+              
+                  {/* {allOpeningHours.length === 0
                     ? kiga.openingHours.join(", ")
-                    : openingHours}
+                    : openingHours} */}
+                    
                 </p>
-              </div>
-              <div className="row center-vertical">
-                <BubbleChart className="result-icon" />
-                <p>
-                  {allGroupSizes.length === 0
-                    ? kiga.groupSizes.join(", ")
-                    : groupSizes}
-                </p>
-              </div>
-              <div className="row center-vertical">
-                <ChildCare className="result-icon" />
-                <p>
-                  {allAgeGroups.length === 0
-                    ? kiga.ageGroups.join(", ")
-                    : ageGroups}
-                </p>
-              </div>
-              <div className="row center-vertical">
-                <Public className="result-icon" />
-                <p>
-                  {publicOrPrivate === ""
-                    ? kiga.publicOrPrivate
-                    : publicOrPrivate}
-                </p>
-              </div>
+              </div>          
             </div>
-            <p className="availability">{availabilityRate}% Auslastung</p>
-            <LinearProgress
-              variant="determinate"
-              value={availabilityRate}
-              sx={{
-                height: "10px",
-                borderRadius: "5px",
-                backgroundColor: "#EEEEEE",
-              }}
-            />
             <div className="row chip-box">
               <div className="col chip-box-col">
                 <Chip
-                  label="LGBTIQ+"
+                  label={kiga.district}
                   color="primary"
-                  style={{ width: "117px" }}
+                  style={{ width: "150px" }}
                 />
-                <Chip
-                  label="Glutenfrei"
-                  color="primary"
-                  style={{ width: "117px" }}
-                />
-                <Chip
-                  label="Ausflüge"
-                  color="primary"
-                  style={{ width: "117px" }}
-                />
+              
               </div>
-              <div className="col chip-box-col">
-                <Chip
-                  label="Vegetarisch"
-                  color="primary"
-                  style={{ width: "117px" }}
-                />
-                <Chip
-                  label="Garten"
-                  color="primary"
-                  style={{ width: "117px" }}
-                />
-                <Chip
-                  label="Ganztags"
-                  color="primary"
-                  style={{ width: "117px" }}
-                />
-              </div>
+            
             </div>
             <div className="kiga-text">
               {" "}
