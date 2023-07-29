@@ -1,20 +1,16 @@
 import { useEffect } from "react";
 import { StyledBackButton } from "../components/StyledBackButton";
 import { StyledMainButton } from "../components/StyledMainButton";
-import { Paper, MobileStepper, LinearProgress, Chip } from "@mui/material";
+import { Paper, MobileStepper, Chip } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   ArrowBack,
   Send,
   AccessTime,
-  BubbleChart,
-  ChildCare,
   LocationOn,
   Map,
-  Public,
 } from "@mui/icons-material";
 import ScrollToTopButton from "../components/ScrollToTopButton";
-import { joinAbbreviations } from "../utils/utils";
 
 function DetailPage({ title }) {
   const { pathname, state } = useLocation();
@@ -26,16 +22,8 @@ function DetailPage({ title }) {
   const {
     district,
     time,
-    name, driveStart, driveEnd, date,
-   // allGroupSizes,
-   // allOpeningHours,
-  //  allAgeGroups,
-  //  publicOrPrivate,
+    name, driveStart, driveDestination, date,
   } = searchParams;
-
-  // const groupSizes = joinAbbreviations(allGroupSizes);
-  // const openingHours = joinAbbreviations(allOpeningHours);
-  // const ageGroups = joinAbbreviations(allAgeGroups);
 
   useEffect(() => {
     document.title = title;
@@ -93,7 +81,7 @@ function DetailPage({ title }) {
               <h3 className="detail-headline">{kiga.name}</h3>
               <div className="row center-vertical">
                 <Map className="result-icon" />
-                <p> {kiga.driveStart} - {kiga.driveEnd}</p>
+                <p> {kiga.driveStart} - {kiga.driveDestination}</p>
               </div>
               <div className="row center-vertical">
                 <LocationOn className="result-icon" />
@@ -101,12 +89,7 @@ function DetailPage({ title }) {
               </div>
               <div className="row center-vertical">
                 <AccessTime className="result-icon" />
-                <p>{kiga.date} um {kiga.time}<br />
-              
-                  {/* {allOpeningHours.length === 0
-                    ? kiga.openingHours.join(", ")
-                    : openingHours} */}
-                    
+                <p>{kiga.date} um {kiga.time}<br /> 
                 </p>
               </div>          
             </div>
@@ -122,49 +105,8 @@ function DetailPage({ title }) {
             
             </div>
             <div className="kiga-text">
-              {" "}
-              Hallo!
-              <br />
-              Wir sind der Kindergarten <b>{kiga.name} 😄</b>
-              <br />
-              <b>
-                Wir freuen uns sehr, dass du dich für unseren Kindergarten
-                interessierst!
-              </b>{" "}
-              🙋
-              <br />
-              <br />
-              Wir befinden uns{" "}
-              <b>mitten im Zentrum des wunderschönen {district}s in Wien</b>
-              🏡 und{" "}
-              <b>
-                bieten neben kleinen (S) auch mittelgroßen (M) Gruppengrößen
-              </b>
-              . Wir freuen uns sehr Kinder von <b>0 - 5</b> Jahren in unserem
-              Haus begrüßen zu dürfen und verfolgen das Konzept der{" "}
-              <b>altermäßig gemischten Gruppen</b>. 👩‍👧‍👦
-              <br />
-              <br />
-              Neben gewöhnlichem <b>Mittagessen</b> 🍲 gibt es bei uns außerdem
-              die Option zwischen{" "}
-              <b>vegetarischen 🥬 sowie glutenfreien 🌾 Menüs</b> zu wählen.
-              Bitte gib uns das wenn möglich gleich zu Beginn bei der Anfrage
-              bzw. Anmeldung bekannt! So kann sichergestellt werden, dass gleich
-              von Beginn an für die Wünsche deines Kindes gesorgt ist.
-              <br />
-              <br />
-              Wir denken, dass sich Kinder nur dann optimal entfalten können
-              wenn sie auch <b>viel frische Luft 🍃 und Platz zum spielen</b> 🧸
-              🚂 🪀 haben. Deshalb stehen <b>Ausflüge ins Grüne</b> ☘️ ganz oben
-              auf unserem Programm!
-              <br />
-              <br />
-              Ganz besonders freuen wir uns auch über{" "}
-              <b>Kinder von Regenbogenfamilien</b> 🌈 🌈 🌈
-              <br />
-              <br />
-              Solltest du weitere Fragen haben oder sonstige Anliegen schick uns
-              gerne eine Anfrage!
+              
+             {}
             </div>
           </div>
         </Paper>
