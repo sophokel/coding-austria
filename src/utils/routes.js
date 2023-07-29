@@ -1,17 +1,17 @@
 // NOT USED
 
 import HomePage from "../pages/DestinationPage";
-import InformationPage from "../pages/InformationPage";
+import CreatePage from "../pages/CreatePage";
 import SearchPage from "../pages/SearchPage";
-import ResultsPage from "../pages/ResultsPage";
+import AllRoutesPage from "../pages/AllRoutesPage";
 
 const routes = [
   { path: "/", component: HomePage, title: "Home" },
-  { path: "/information", component: InformationPage, title: "Informationen" },
+  { path: "/create", component: CreatePage, title: "Erstellen" },
   { path: "/search", component: SearchPage, title: "Suche" },
   {
-    path: "/results",
-    component: ResultsPage,
+    path: "/routes",
+    component: AllRoutesPage,
     title: "Liste der verfügbaren Kindergärten",
   },
 ];

@@ -4,7 +4,7 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 import { StyledMainButton } from "../components/StyledMainButton";
 import { Link } from "react-router-dom";
 
-function InformationPage({ title }) {
+function CreatePage({ title }) {
   useEffect(() => {
     document.title = title;
   }, [title]);
@@ -135,4 +135,4 @@ function InformationPage({ title }) {
   );
 }
 
-export default InformationPage;
+export default CreatePage;

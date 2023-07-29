@@ -1,18 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import {
-  Pageview,
-  PageviewOutlined,
-  InfoOutlined,
-  Info,
-  FeaturedPlayList,
-  FeaturedPlayListOutlined,
   PinDrop,
   PinDropOutlined,
-    Route,
-    RouteOutlined,
-AddCircleOutline,
-AddCircle,
+  Route,
+  RouteOutlined,
+  AddCircleOutline,
+  AddCircle,
 } from "@mui/icons-material";
 
 function Footer({ route }) {
@@ -23,11 +17,11 @@ function Footer({ route }) {
   };
 
   const openInfo = () => {
-    navigate("/information");
+    navigate("/create");
   };
 
-  const handleClickResultsList = () => {
-    navigate("/results", {
+  const handleClickAllRoutesList = () => {
+    navigate("/allRoutes", {
       state: {
         kiga: {},
         searchParams: {
@@ -45,11 +39,11 @@ function Footer({ route }) {
     <div className="footer">
       <div className="footer-menu footer-menu-left col center-vertical">
         <IconButton
-          onClick={handleClickResultsList}
+          onClick={openInfo}
           color="secondary"
           sx={{ padding: "0 0 5px 0" }}
         >
-          {route === "results" ? (
+          {route === "create" ? (
             <AddCircle />
           ) : (
             <AddCircleOutline />
@@ -71,11 +65,11 @@ function Footer({ route }) {
 
       <div className="footer-menu footer-menu-right col center-vertical">
         <IconButton
-          onClick={openInfo}
+          onClick={handleClickAllRoutesList}
           color="secondary"
           sx={{ padding: "0 0 5px 0" }}
         >
-          {route === "information" ? <Route /> : <RouteOutlined />}
+          {route === "allRoutes" ? <Route /> : <RouteOutlined />}
         </IconButton>
         <p>Route</p>
       </div>

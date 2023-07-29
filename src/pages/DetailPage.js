@@ -15,8 +15,6 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 function DetailPage({ title }) {
   const { pathname, state } = useLocation();
   const navigate = useNavigate();
-  const availabilityRate = Math.floor(Math.random() * 100);
-
   const { kiga, searchParams } = state;
 
   const {
@@ -47,7 +45,7 @@ function DetailPage({ title }) {
 
   const handleBackClick = (e) => {
     e.preventDefault();
-    navigate("/results", {
+    navigate("/routes", {
       state: {
         kiga,
         searchParams,

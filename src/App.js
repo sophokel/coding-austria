@@ -2,11 +2,10 @@ import theme from "./styles/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
-import HomePage from "./pages/DestinationPage";
-import InformationPage from "./pages/InformationPage";
+import CreatePage from "./pages/CreatePage";
 import SearchPage from "./pages/SearchPage";
 import ErrorPage from "./pages/ErrorPage";
-import ResultsPage from "./pages/ResultsPage";
+import AllRoutesPage from "./pages/AllRoutesPage";
 import DetailPage from "./pages/DetailPage";
 import { useEffect, useState } from "react";
 import InquiryPage from "./pages/InquiryPage";
@@ -25,9 +24,9 @@ const titles = {
     header: "Ausflugsziel",
     document: "Swipe&Ride",
   },
-  "/information": {
-    route: "information",
-    header: "Informationen",
+  "/create": {
+    route: "create",
+    header: "Erstellen",
     document: "Swipe&Ride",
   },
   "/search": {
@@ -35,9 +34,9 @@ const titles = {
     header: "Suche",
     document: "Swipe&Ride",
   },
-  "/results": {
-    route: "results",
-    header: "Liste der verfügbaren Kindergärten",
+  "/allRoutes": {
+    route: "allRoutes",
+    header: "Routen",
     document: "Swipe&Ride",
   },
   "/details": {
@@ -79,13 +78,13 @@ function App() {
         <Route path="/" element={<DestinationPage title={documentTitle} />} />
         <Route path="/destination" element={<DestinationPage title={documentTitle} />} />
         <Route
-          path="/information"
-          element={<InformationPage title={documentTitle} />}
+          path="/create"
+          element={<CreatePage title={documentTitle} />}
         />
         <Route path="/search" element={<SearchPage title={documentTitle} />} />
         <Route
-          path="/results"
-          element={<ResultsPage title={documentTitle} />}
+          path="/allRoutes"
+          element={<AllRoutesPage title={documentTitle} />}
         />
         <Route path="/details" element={<DetailPage title={documentTitle} />} />
         <Route

@@ -32,7 +32,7 @@ h5 {
 .header-menu {
   background-color: #bee4be;
   z-index: 3;
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
   0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   height: 56px;
   justify-content: space-between;
@@ -44,7 +44,7 @@ h5 {
 .header-title-box {
   height: 40px;
   background-color: white;
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
   0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   width: 100vw;
   position: fixed;
@@ -100,7 +100,7 @@ h5 {
   position: relative;
 
   .headline-box {
-    margin-top: 116px;
+    margin-top: 60px;
   }
 
   .headline {
@@ -308,7 +308,7 @@ h5 {
   width: calc(100% - 20px);
   z-index: 1000;
   align-items: center;
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
   0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   font-weight: 500;
   font-size: 0.875rem;
@@ -351,7 +351,7 @@ h5 {
   bottom: 0;
   width: 100vw;
   background-color: #bee4be;
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
   0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;

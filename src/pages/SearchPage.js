@@ -76,7 +76,7 @@ function SearchPage({ title }) {
 
         setTimeout(() => {
           setShowSpinner(false);
-          navigate("/results", {
+          navigate("/routes", {
             state: {
               kiga: {},
               searchParams: {
