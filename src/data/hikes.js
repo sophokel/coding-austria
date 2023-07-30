@@ -1,6 +1,18 @@
 export const hikes = [
   {
     id: 1,
+    name: "Hinterbrühl nach Mödling",
+    hikeStart: "Hinterbrühl",
+    hikeDestination: "Mödling",
+    duration: "2 Stunden",
+    district: "Niederösterreich",
+    time: '09:00',
+    date: '15-08-2023',
+    level: 'mittel',
+    description: ''
+  },
+  {
+    id: 2,
     name: "Wassergspreng - Einödenberg - Hochstraße VII - Wassergspreanghöhle",
     hikeStart: "Hinterbrühl",
     hikeDestination: "Mödling",
@@ -12,7 +24,7 @@ export const hikes = [
     description: ''
   },
   {
-    id: 2,
+    id: 3,
     name: "Anninger bis Heiligenkreuz über Beethovenweg & Via Sacra",
     hikeStart: "Anninger",
     hikeDestination: "Heiligenkreuz",
@@ -23,16 +35,4 @@ export const hikes = [
     level: 'mittel',
    description: 'Dauer ca. 4 Stunden. Führt über den Beethovenweg und die Via Sacra.',
   },
-  {
-    id: 3,
-    name: "Hinterbrühl nach Mödling",
-    hikeStart: "Hinterbrühl",
-    hikeDestination: "Mödling", 
-    duration: "2 Stunden",
-    district: "Niederösterreich",
-    time: '09:00',
-    date: '15-08-2023',
-    level: 'mittel',
-   description: ''
-  },
-    ];
+];

@@ -64,6 +64,7 @@ h5 {
 
 .card-img {
   height: 100%;
+  border-radius: 4px;
 }
 
 .card-text-bottom {
@@ -94,6 +95,26 @@ h5 {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 115px;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.button {
+  background-color: #bde4be;
+  padding: 10px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .col {
