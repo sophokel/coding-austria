@@ -7,7 +7,7 @@ export const allRoutes = [
     district: "Niederösterreich",
     time: '19:00',
     date: '01-08-2023',
-   description: ''
+    description: ''
   },
   {
     id: 2,
@@ -17,7 +17,6 @@ export const allRoutes = [
     district: "Niederösterreich",
     time: '20:30',
     date: '05-08-2023',
-   
   },
   {
     id: 3,
@@ -27,7 +26,6 @@ export const allRoutes = [
     district: "Tirol",
     time: '22:00',
     date: '11-08-2023',
-   
   },
   {
     id: 4,
@@ -37,7 +35,6 @@ export const allRoutes = [
     district: "Niederösterreich",
     time: '19:00',
     date: '01-08-2023',
-   
   },
   {
     id: 5,
@@ -47,7 +44,6 @@ export const allRoutes = [
     district: "Niederösterreich",
     time: '19:00',
     date: '01-08-2023',
-   
   },
   {
     id: 6,
@@ -57,6 +53,5 @@ export const allRoutes = [
     district: "Niederösterreich",
     time: '19:00',
     date: '01-08-2023',
-   
   },
   ];
