@@ -24,11 +24,6 @@ h5 {
   font-weight: 400;
 }
 
-#outer-container {
-  height: 100vh;
-  position: relative;
-}
-
 .header-menu {
   background-color: #bee4be;
   z-index: 3;
@@ -41,29 +36,9 @@ h5 {
   top: 0;
 }
 
-.header-title-box {
-  height: 40px;
-  background-color: white;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
-  0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  width: 100vw;
-  position: fixed;
-  top: 56px;
-  z-index: 2;
-}
-
-.header-title {
-  margin-left: 8px;
-}
-
 .alert {
   margin-top: 25px;
   width: 100%;
-}
-
-.landing-page {
-  position: relative;
-  height: 100vh;
 }
 
 .tinder-card {
@@ -76,7 +51,7 @@ h5 {
   height: 300px;
 }
 
-.route-swipe-card {
+.card {
   position: relative;
   background-color: #fff;
   width: 80vw;
@@ -107,10 +82,6 @@ h5 {
   align-items: center;
 }
 
-.center-horizontal {
-  justify-content: center;
-}
-
 .container {
   padding-left: 16px;
   padding-right: 16px;
@@ -124,33 +95,6 @@ h5 {
     font-weight: 500;
     margin-bottom: 20px;
     margin-top: 20px;
-  }
-
-  .paragraph {
-    line-height: 1.5;
-    font-weight: 400;
-    font-size: 16px;
-    overflow-wrap: break-word;
-  }
-
-  .paragraph-headline {
-    line-height: 1.5;
-    font-weight: 500;
-    margin-bottom: 7px;
-  }
-
-  .paragraph-pic {
-    height: 200px;
-
-    &.right {
-      padding-left: 16px;
-      float: right;
-    }
-
-    &.left {
-      padding-right: 16px;
-      float: left;
-    }
   }
 }
 
@@ -218,13 +162,6 @@ h5 {
   // margin-bottom: 20px;
 }
 
-.availability {
-  font-weight: 500;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-
 .chip-box {
   margin-top: 25px;
   justify-content: space-around;
@@ -239,21 +176,6 @@ h5 {
   margin-top: 25px;
 }
 
-.privacy {
-  margin: 25px 0;
-}
-
-.success-icon {
-  font-size: 5em;
-  text-align: center;
-}
-
-.success-text {
-  width: 90%;
-  margin-bottom: 20px;
-  line-height: 2;
-}
-
 .search-field {
   margin-bottom: 30px;
 }
@@ -261,20 +183,6 @@ h5 {
 .required-description {
   font-size: 14px;
   margin-bottom: 20px;
-}
-
-.btn__inquiry {
-  position: absolute;
-}
-
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 998;
 }
 
 .modal {
@@ -288,30 +196,6 @@ h5 {
   max-width: 90%;
   z-index: 999;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.modal-paragraph {
-  margin-top: 10px;
-}
-
-.modal-headline {
-  font-weight: 500;
-  margin-bottom: 7px;
-}
-
-.modal-title {
-  font-weight: 500;
-  margin-bottom: 10px;
 }
 
 .snackbar {
@@ -355,16 +239,10 @@ h5 {
   width: 100%;
 }
 
-.logo-header {
-  width: 80px;
-  margin-right: 14px;
-}
-
 .logo-left {
   align-self: center;
   padding-left: 14px;
 }
-
 
 .footer {
   position: fixed;
