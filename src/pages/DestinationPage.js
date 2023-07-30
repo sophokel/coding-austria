@@ -83,7 +83,7 @@ function DestinationPage() {
       <>
         <div className="card-container">
           {hikes.map((hike, index) => (
-              <TinderCard
+                <TinderCard
                   ref={childRefs[index]}
                   className='swipe'
                   key={hike.name}
@@ -107,6 +107,11 @@ function DestinationPage() {
                 </Paper>
               </TinderCard>
           ))}
+          <div className="swipe">
+            <div className="card no-more">
+              Sorry! Keine weiteren Routen!
+            </div>
+          </div>
         </div>
         <div className="button-container">
           <div className="button">
