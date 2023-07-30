@@ -16,7 +16,6 @@ function Header({ title }) {
         <div className="header-menu row">
          <img
             src="/images/logo_text.png"
-            alt="Kindergarten"
             onClick={() => navigate("/destination")}
             className="logo logo-left"
           ></img>

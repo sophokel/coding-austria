@@ -1,4 +1,4 @@
-export const allRoutes = [
+export const hikes = [
   {
     id: 1,
     name: "Wassergspreng - Einödenberg - Hochstraße VII - Wassergspreanghöhle",

@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { Paper } from "@mui/material";
 import TinderCard from 'react-tinder-card'
+import {hikes} from '../data/hikes';
 
 const onSwipe = (direction) => {
   if (direction === 'left') {
@@ -19,19 +20,35 @@ function DestinationPage() {
   const [match, setMatch] = useState(false);
   const [msg, setMsg] = useState("");
   const navigate = useNavigate();
+  const [lastDirection, setLastDirection] = useState()
+
+  const swiped = (direction, nameToDelete) => {
+    console.log('removing: ' + nameToDelete)
+    setLastDirection(direction)
+  }
+
+  const outOfFrame = (name) => {
+    console.log(name + ' left the screen!')
+  }
 
   useEffect(() => {
     document.title = "Swipe&Ride";
   }, [navigate]);
 
   return (
-    <div className="landing-page col center-all">
-      <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}>
-        <Paper className="route-swipe-card" sx={{backgroundColor: 'violet'}}>Test</Paper>
-      </TinderCard>
+    <div className="card-container">
+      {hikes.map((hike, index) => (
+          <TinderCard class="tinder-card" key={hike.id} onSwipe={(dir) => swiped(dir, hike.name)} preventSwipe={['right', 'left']} onCardLeftScreen={() => outOfFrame(hike.name)}>
+            <Paper key={hike.id} className="route-swipe-card" sx={{backgroundColor: 'violet'}}>
+              <img src={`/images/hike${hike.id}.jpeg`} alt={`hike${hike.id}`} className="tinder-card"/>
+              <p>{hike.name}</p>
+            </Paper>
+          </TinderCard>
+      ))}
       {match ? <Paper>Test</Paper> : ''}
     </div>
   );
 }
+
 
 export default DestinationPage;

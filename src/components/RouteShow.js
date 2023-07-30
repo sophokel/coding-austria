@@ -38,7 +38,6 @@ function RouteShow({ kiga, index, state }) {
         <h3 className="result-headline">{kiga.name}</h3>
         <div className="row">
           <img
-            alt="Kindergarten"
             src={`/images/default-photo.jpeg`}
             className="result-pic"
           />

@@ -71,7 +71,6 @@ function DetailPage({ title }) {
         <Paper>
           <div className="result-box col">
             <img
-              alt="Kindergarten"
               src={`/images/default-photo.jpeg`}
               className="result-pic"
             />

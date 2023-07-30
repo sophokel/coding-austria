@@ -3,13 +3,11 @@ import { ThemeProvider } from "@mui/material/styles";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import CreatePage from "./pages/CreatePage";
-import SearchPage from "./pages/SearchPage";
 import ErrorPage from "./pages/ErrorPage";
 import AllRoutesPage from "./pages/AllRoutesPage";
 import DetailPage from "./pages/DetailPage";
 import { useEffect, useState } from "react";
 import InquiryPage from "./pages/InquiryPage";
-import SuccessPage from "./pages/SuccessPage";
 import Footer from "./components/Footer";
 import DestinationPage from "./pages/DestinationPage";
 
@@ -49,11 +47,6 @@ const titles = {
     header: "Anfrage senden",
     document: "Swipe&Ride",
   },
-  "/success": {
-    route: "success",
-    header: "Anfrage",
-    document: "Swipe&Ride",
-  },
 };
 
 function App() {
@@ -81,7 +74,6 @@ function App() {
           path="/create"
           element={<CreatePage title={documentTitle} />}
         />
-        <Route path="/search" element={<SearchPage title={documentTitle} />} />
         <Route
           path="/allRoutes"
           element={<AllRoutesPage title={documentTitle} />}
@@ -90,10 +82,6 @@ function App() {
         <Route
           path="/inquiry"
           element={<InquiryPage title={documentTitle} />}
-        />
-        <Route
-          path="/success"
-          element={<SuccessPage title={documentTitle} />}
         />
         <Route path="*" element={<ErrorPage title={documentTitle} />} />
       </Routes>
