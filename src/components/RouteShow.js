@@ -36,10 +36,10 @@ function RouteShow({ travel, index, state }) {
     <Paper key={index} className="result-container" onClick={showDetails}>
       <div className="result-box col">
         <h3 className="result-headline">{travel.name}</h3>
-        <div className="row">
-          <img
-            src={`/images/default-photo.jpeg`}
-            className="result-pic"
+        <div className="row" >
+          <img 
+            src={`/images/route${travel.id}.jpg`}
+            className="result-pic" alt='travel'
           />
           <div className="col result-infos">
             <div className="row center-vertical">
@@ -52,18 +52,11 @@ function RouteShow({ travel, index, state }) {
             </div>
             <div className="row center-vertical">
               <AccessTime className="result-icon" />
-              <p>{travel.time}
+              <p>{travel.date} um {travel.time}
                
               </p>
             </div>
-            <div className="row center-vertical">
-              <BubbleChart className="result-icon" />
-              <p>{travel.date}
-                {/* {allGroupSizes.length === 0
-                  ? kitravelga.groupSizes.join(", ")
-                  : groupSizes} */}
-              </p>
-            </div>
+            
             <div className="row center-vertical">
               <Public className="result-icon" />
               <p>{travel.driveStart} - {travel.driveDestination}
@@ -73,15 +66,7 @@ function RouteShow({ travel, index, state }) {
           </div>
         </div>
       </div>
-      {/* <Button
-        variant="contained"
-        className="result-button"
-        startIcon={<Loupe />}
-        sx={{ position: "absolute", bottom: "15px", right: "15px" }}
-        onClick={showDetails}
-      >
-        Details
-      </Button> */}
+     
     </Paper>
   );
 }

@@ -104,6 +104,7 @@ h5 {
 .row {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .center-all {
@@ -163,8 +164,9 @@ h5 {
 }
 
 .result-pic {
-  width: 150px;
+  min-width: 150px;
   height: 150px;
+  border-radius: 8px;
 }
 
 .result-headline {
