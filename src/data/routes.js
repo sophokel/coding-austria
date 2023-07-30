@@ -7,7 +7,7 @@ export const allRoutes = [
     district: "Niederösterreich",
     time: '19:00',
     date: '01-08-2023',
-    description: ''
+    
   },
   {
     id: 2,
@@ -17,6 +17,7 @@ export const allRoutes = [
     district: "Niederösterreich",
     time: '20:30',
     date: '05-08-2023',
+
   },
   {
     id: 3,
