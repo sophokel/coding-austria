@@ -49,7 +49,7 @@ function AllRoutesPage({ title }) {
         />
       </div>
       {routes.map((route, index) => (
-        <RouteShow key={index} kiga={route} state={state} />
+        <RouteShow key={index} travel={route} state={state} />
       ))}
       <div className="bottom-spacer"></div>
     </div>

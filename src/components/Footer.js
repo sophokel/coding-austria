@@ -17,13 +17,13 @@ function Footer({ route }) {
   };
 
   const openInfo = () => {
-    navigate("/create");
+    navigate("/createRoute");
   };
 
   const handleClickAllRoutesList = () => {
     navigate("/allRoutes", {
       state: {
-        kiga: {},
+        travel: {},
         searchParams: {
           district: "",
           allOpeningHours: [],
@@ -43,7 +43,7 @@ function Footer({ route }) {
           color="secondary"
           sx={{ padding: "0 0 5px 0" }}
         >
-          {route === "create" ? (
+          {route === "createRoute" ? (
             <AddCircle />
           ) : (
             <AddCircleOutline />

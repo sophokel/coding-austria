@@ -9,7 +9,7 @@ import { Paper } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 // import { joinAbbreviations } from "../utils/utils";
 
-function RouteShow({ kiga, index, state }) {
+function RouteShow({ travel, index, state }) {
   const navigate = useNavigate();
 
   const { searchParams } = state;
@@ -26,7 +26,7 @@ function RouteShow({ kiga, index, state }) {
     e.preventDefault();
     navigate("/details", {
       state: {
-        kiga,
+        travel,
         searchParams,
       },
     });
@@ -35,7 +35,7 @@ function RouteShow({ kiga, index, state }) {
   return (
     <Paper key={index} className="result-container" onClick={showDetails}>
       <div className="result-box col">
-        <h3 className="result-headline">{kiga.name}</h3>
+        <h3 className="result-headline">{travel.name}</h3>
         <div className="row">
           <img
             src={`/images/default-photo.jpeg`}
@@ -44,29 +44,29 @@ function RouteShow({ kiga, index, state }) {
           <div className="col result-infos">
             <div className="row center-vertical">
               <Map className="result-icon" />
-              <p>{kiga.name}</p>
+              <p>{travel.name}</p>
             </div>
             <div className="row center-vertical">
               <LocationOn className="result-icon" />
-              <p>{district === "" ? kiga.district : district}</p>
+              <p>{district === "" ? travel.district : district}</p>
             </div>
             <div className="row center-vertical">
               <AccessTime className="result-icon" />
-              <p>{kiga.time}
+              <p>{travel.time}
                
               </p>
             </div>
             <div className="row center-vertical">
               <BubbleChart className="result-icon" />
-              <p>{kiga.date}
+              <p>{travel.date}
                 {/* {allGroupSizes.length === 0
-                  ? kiga.groupSizes.join(", ")
+                  ? kitravelga.groupSizes.join(", ")
                   : groupSizes} */}
               </p>
             </div>
             <div className="row center-vertical">
               <Public className="result-icon" />
-              <p>{kiga.driveStart} - {kiga.driveDestination}
+              <p>{travel.driveStart} - {travel.driveDestination}
               
               </p>
             </div>

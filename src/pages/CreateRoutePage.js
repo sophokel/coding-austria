@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
-function CreatePage({ title }) {
+function CreateRoutePage({ title }) {
   useEffect(() => {
     document.title = title;
   }, [title]);
@@ -15,4 +15,4 @@ function CreatePage({ title }) {
   );
 }
 
-export default CreatePage;
+export default CreateRoutePage;

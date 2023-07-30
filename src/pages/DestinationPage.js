@@ -38,9 +38,9 @@ function DestinationPage() {
   return (
     <div className="card-container">
       {hikes.map((hike, index) => (
-          <TinderCard class="tinder-card" key={hike.id} onSwipe={(dir) => swiped(dir, hike.name)} preventSwipe={['right', 'left']} onCardLeftScreen={() => outOfFrame(hike.name)}>
+          <TinderCard className="swipe" key={hike.id} onSwipe={(dir) => swiped(dir, hike.name)} preventSwipe={['right', 'left']} onCardLeftScreen={() => outOfFrame(hike.name)}>
             <Paper key={hike.id} className="card" sx={{backgroundColor: 'violet'}}>
-              <img src={`/images/hike${hike.id}.jpeg`} alt={`hike${hike.id}`} className="tinder-card"/>
+              <img src={`/images/hike${hike.id}.jpeg`} alt={`hike${hike.id}`} className="card-img"/>
               <p>{hike.name}</p>
             </Paper>
           </TinderCard>

@@ -1,12 +1,12 @@
 // NOT USED
 
 import HomePage from "../pages/DestinationPage";
-import CreatePage from "../pages/CreatePage";
+import CreateRoutePage from "../pages/CreateRoutePage";
 import AllRoutesPage from "../pages/AllRoutesPage";
 
 const routes = [
   { path: "/", component: HomePage, title: "Home" },
-  { path: "/create", component: CreatePage, title: "Erstellen" },
+  { path: "/createRoute", component: CreateRoutePage, title: "Erstellen" },
   {
     path: "/routes",
     component: AllRoutesPage,
